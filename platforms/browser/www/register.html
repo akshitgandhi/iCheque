@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="registerApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  
+      <link rel="stylesheet" href="css/style_login.css">
+<style type="text/css">
+	.button{
+		width:50%;
+	}
+	.wrapper{
+		text-align: center;
+	}
+</style>
+  
+</head>
+
+<body ng-controller="registerController" style="font-size: 40px">
+		<div style="text-align: center;"> 
+			<img src="img/login_header2.png" width="90%">
+		</div>
+		
+
+      <!-- Simple Textfield -->
+      <form action="#" style="margin-top: 5px; margin-left: 30px;">
+        <div class="mdl-textfield mdl-js-textfield">
+          <i class="mdl-textfield__icon material-icons">phone</i>
+          <input class="mdl-textfield__input" type="Number" id="sample1" />
+          <label class="mdl-textfield__label" for="sample1">Mobile Number</label>
+        </div>
+      <br>
+        <div class="mdl-textfield mdl-js-textfield">
+          <i class="mdl-textfield__icon material-icons">lock</i>
+          <input class="mdl-textfield__input" type="password" pattern="-?\d\d\d\d?" id="sample2" />
+          <label class="mdl-textfield__label" for="sample2">4 digit iPin</label>
+          <span class="mdl-textfield__error">Input is not a valid iPin!</span>
+        </div>
+        <br>
+        <div class="mdl-textfield mdl-js-textfield">
+          <i class="mdl-textfield__icon material-icons">lock</i>
+          <input class="mdl-textfield__input" type="password" pattern="-?\d\d\d\d?" id="sample3" />
+          <label class="mdl-textfield__label" for="sample2">Confirm iPin</label>
+          <span class="mdl-textfield__error">Both iPins don't match!</span>
+        </div>
+      </form>    
+  
+    <script src="js/index_login.js"></script>
+
+    <div class="wrapper">
+    	<button ng-click="register()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored button">
+		  Register
+		</button>
+    </div>
+    <br>
+    <form action="login.html">
+          <div class="wrapper">
+      <p align="center" style="color: #4a4a4a;font-size: 16px;">Already have an iCheque Account?</p>
+      <button class="mdl-button mdl-js-button" style="background-color: #fff;color: indigo;border: 2px solid indigo;">
+      Login
+    </button>
+    </div>
+    </form>
+
+
+</body>
+<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./js/register.js"></script>
+</html>

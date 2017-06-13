@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
+	<!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<script type="text/javascript">
+  function logout(){
+    var storage = window.localStorage;
+    storage.removeItem("Loggedin");
+    storage.removeItem("vpa");
+    window.location="login.html";
+  }
+  function load(){
+    var storage = window.localStorage;
+    var value = storage.getItem("Loggedin");
+    if(value=="1"){
+    }else{
+      alert("session expired");
+      window.location="login.html";
+    }
+  }
+</script>
+<body onload="load()">
+	<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row" style="position: absolute;top: 0px;">
+      <span class="mdl-layout-title">iCheque</span>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">How to use iCheques</a>
+      <a class="mdl-navigation__link" href="">Notifications</a>
+      <a class="mdl-navigation__link" href="mailto:bank@icici.com?Subject=Need%20Help!">Customer Care</a>
+    </nav>
+    <button class="w3-pink w3-btn" style="color: white;" onclick="logout()">Logout</button>
+  </div>
+  <main class="mdl-layout__content">
+  <br>
+    <div class="page-content">
+    <!-- Your content goes here -->
+    	<div class="container" >
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/cheque1.jpg">
+      </div>
+      <div class="item">
+        <img src="img/cheque-bank.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
+    <script src="js/carousel_index.js"></script>
+    <br>
+    <div class="w3-container">
+  <div class="w3-card-4" style="width:100%">
+    <header class="w3-container w3-light-grey">
+      <h4>Cheque Transactions</h4>
+    </header>
+    <br>
+    <div class="w3-container w3-center">
+      <a href="generatecheque.html"><img src="img_avatar3.png" alt="Avatar" class="w3-circle w3-center" style="width:20%;margin-right: 2%;"></a>
+      <a href="http:www.google.com"><img src="img_avatar3.png" alt="Avatar" class="w3-circle w3-center" style="width:20%;margin-right: 2%;"></a>
+      <a href="http:www.google.com"><img src="img_avatar3.png" alt="Avatar" class="w3-circle w3-center" style="width:20%;margin-right: 2%;"></a>
+      <a href="http:www.google.com"><img src="img_avatar3.png" alt="Avatar" class="w3-circle w3-center" style="width:20%;margin-right: 2%;"></a>
+    </div>
+    <br>
+  </div>
+</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

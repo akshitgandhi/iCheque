@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">	
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	<link href="lib/swiper/dist/css/swiper.min.css" rel="stylesheet">	
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/w3.css">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+	
+    <script src="lib/swiper/dist/js/swiper.js"></script>
+    <!--<script src="../bower_components/angular/angular.js"></script>-->
+    <script src="lib/angular-swiper/dist/angular-swiper.js"></script>	
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <style>
+.button {
+    background-color: #02c9b5; /* Green */
+    border: none;
+    color: white;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button5 {-webkit-border-top-left-radius: 20px;
+-webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;}
+.signin{
+    background-color: #02c9b5;
+    width: 110px;
+    font-size: 16px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+</style>
+  </head>
+  <body ng-controller="CarouselController" style="text-align: center;">
+      <ion-content>
+		<ks-swiper-container initial-slide="0" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="1" space-between="5" pagination-clickable="false"  on-ready="onReadySwiper(swiper)" style="margin-top: 70px">
+			<ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5]">
+				<img ng-src="img/img-{{s}}.png" width="95%">
+			</ks-swiper-slide>			
+		</ks-swiper-container>	
+      </ion-content>
+      <br>
+      <form action="register.html">
+      	<button ion-button class = "button button5" style="margin-top: 430px;color: white;">Register</button>
+      </form>
+      <div style="display: inline-block;">
+       <p align="center" style="color: #4a4a4a;margin-top: 10px;">Already have iCheque Account?</p>
+       <form action="login.html">
+       	<button ion-button class = "button button5" style="color: white;background-color: #3f51b5;">Sign In</button>
+       </form>
+      </div>
+  </body>
+</html>

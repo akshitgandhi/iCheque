@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app="depositChequeApp">
+<head>
+  <title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/material.indigo-pink.min.css">
+   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="css/style_animate.css">
+  <!-- <script defer src="js/material.min.js"></script> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script defer src="js/material1.min.js">   </script>
+  <style type="text/css">
+    .material-icons.md-36 { 
+      font-size: 48px; 
+      margin-left: 5px;
+    }
+    .para{
+      display: inline-block;
+    }
+    [type="date"] {
+      background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+      border-right: none;
+      border-left: none;
+      border-top: none;
+      border-bottom-color: #d3d3d3;
+    }
+    [type="date"]::-webkit-inner-spin-button {
+      display: none;
+    }
+    [type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+    }
+    .mdl-textfield__label__icon {
+   position: absolute;
+   right: 0;
+   top: 20px;
+}
+h4{
+  display: inline-block;
+  color: white;
+}
+  </style>
+  <script type="text/javascript">
+  function logout(){
+    var storage = window.localStorage;
+    storage.removeItem("Loggedin");
+    storage.removeItem("vpa");
+    window.location="login.html";
+  }
+    function redirect(){
+      window.location="homepage.html";
+    }
+    function depositcheque(){
+      window.location="depositcheque.html"
+    }
+    function printKey(){
+      var storage = window.localStorage;
+      var value = storage.getItem("vpa");
+      alert(value);
+    }
+    function load(){
+      var storage = window.localStorage;
+    var value = storage.getItem("vpa");
+    if(value!=""){
+    }else{
+      alert("session expired");
+      window.location="login.html";
+    }
+    }
+  </script>
+</head>
+<body ng-controller="depositChequeController" onload="load()">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row" style="position: absolute;top: 0px;">
+      <span class="mdl-layout-title">Deposit Cheque</span>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="homepage.html">Home</a>
+      <a class="mdl-navigation__link" href="">How to use iCheques</a>
+      <a class="mdl-navigation__link" href="">Notifications</a>
+      <a class="mdl-navigation__link" href="mailto:bank@icici.com?Subject=Need%20Help!">Customer Care</a>
+    </nav>
+    <button class="w3-btn" style="color: white;background-color: #02c9b5;" onclick="logout()">Logout</button>
+  </div>
+  <main class="mdl-layout__content">
+  <br>
+    <div class="page-content">
+<div class="w3-container">
+  <p align="center" style="color: #4a4a4a;">Please enter the details of the icheque that you have received</p>
+  <div class="w3-card-2" style="width:100%;">
+    <header class="w3-container" style="background-color: #02c9b5;color: white;">
+      <h5>Cheque Details</h5>
+    </header>
+
+    <div class="w3-container">
+    <br>
+    <!-- Input field chaiye -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+        <input class="mdl-textfield__input" id="textfield-ChequeNo" type="number">
+        <label class="mdl-textfield__label" for="textfield-ChequeNo">iCheque no.</label>
+        <span class="mdl-textfield__error">Please Enter Valid cheque No.</span>
+        <i class="material-icons mdl-textfield__label__icon">credit_card</i>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+        <input class="mdl-textfield__input" id="textfield-MobileNo" type="number">
+        <label class="mdl-textfield__label" for="textfield-MobileNo">Primary Mobile No.</label>
+        <span class="mdl-textfield__error">Please Enter Valid Mobile No.</span>
+        <i class="material-icons mdl-textfield__label__icon">phone</i>
+      </div>
+      <br>
+    </div>
+  </div>
+  <br>
+    
+        <button class="w3-button w3-indigo" style="width: 100%" ng-click="deposit()">Deposit in Account</button>
+        <br><br>
+                    <div id="id01" class="w3-modal" style="margin-top: 30px;">
+                <div class="w3-modal-content w3-animate-bottom w3-card-4">
+                  <header class="w3-container w3-indigo"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h6 id="heading">We are processing your request...</h6>
+                  </header>
+                  <div class="w3-container">
+                    <p id="plswait">Please Wait</p>
+                  <div class="circle-loader w3-center" id="circle">
+                    <div class="checkmark draw"></div>
+                  </div>
+
+                    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                      <script src="js/index.js"></script>
+                    </div>
+                    <button class="w3-btn" onclick="depositcheque()" id="share" style=" text-align: center; width: 100%;background-color: #02c9b5;color: white;">Go Back</button>
+                </div>
+              </div>
+              </div>
+</body>
+<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./js/depositCheque.js"></script>
+</html>
