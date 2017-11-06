@@ -4,6 +4,8 @@ Project was a part of ICICI Bank Appathon 2017, RBL Bank Hackathon 2017.
 The basic idea was to turn physical cheques into digital while maintaining the same aesthetic as that of a physical cheque.
 
 For more information please watch the youtube video:
+
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/KGZduQwzi80/0.jpg)](https://www.youtube.com/watch?v=KGZduQwzi80)
 
 [phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
