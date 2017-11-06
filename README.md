@@ -1,6 +1,6 @@
-# Used PhoneGap Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# Based on PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
 
-Project was a part of ICICI Bank Appathon 2017, RBL Bank Hackathon 2017.
+Project was a part of ICICI Bank Appathon 2017, RBL Bank Hackathon 2017. The app was made using phonegap framework so that it can run on multiple mobile platforms without the need for the development of code for multiple platforms.
 The basic idea was to turn physical cheques into digital while maintaining the same aesthetic as that of a physical cheque.
 
 For more information please watch the youtube video:
