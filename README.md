@@ -2,6 +2,7 @@
 
 Project was a part of ICICI Bank Appathon 2017, RBL Bank Hackathon 2017. The app was made using phonegap framework so that it can run on multiple mobile platforms without the need for the development of code for multiple platforms.
 The basic idea was to turn physical cheques into digital while maintaining the same aesthetic as that of a physical cheque.
+A detailed ppt is in the repo. Please refer to the ppt/video to get the idea of my project.
 
 For more information please watch the youtube video:
 
